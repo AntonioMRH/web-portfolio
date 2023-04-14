@@ -44,9 +44,9 @@ function ExperiencePage() {
                                     companyPage="https://www.linkedin.com/company/hackachain/"
                                     duration="September 2022 - December 2022"
                                     tasks={[
-                                        'Worked with a team to build a DeFi platform for the NEAR Blockchain.',
+                                        'Collaborated with two other team members to create a DeFi platform on the NEAR blockchain.',
                                         'Responsible for the front-end of the application',
-                                        'Implemented performance enhancements on the back-end of the project.',
+                                        'Implemented performance enhancements on the back end by updating GraphQL queries.',
                                     ]}
                                     stackList={[
                                         'React',
@@ -67,15 +67,14 @@ function ExperiencePage() {
                                     companyPage="https://bix-tech.com/"
                                     duration="May 2021 - August 2022"
                                     tasks={[
-                                        `Responsible for developing a customer section page for the international branch of the
-                                        leading ceramic tile company in Brazil. Designed and implemented a system to display purchase and product
-                                        data for e-commerce customers on the client's website, covering both front-end and back-end development.`,
-                                        `Developed a software solution for monitoring factory processes in the agricultural sector, focusing
-                                        on the creation of the front-end of the platform. Contributed to the development of a mobile app for the same
-                                        client, which aids in the classification of grain quality.`,
-                                        `Created a blog and advertising page for a company specializing in providing advertising
-                                        services to financial sector clients. Designed and implemented the front-end and back-end architecture of the
-                                        page. Coordinated the work of an intern during the development process.`,
+                                        `Responsible for developing a customer section page for one of the largest ceramic tile companies in the
+                                        world.
+                                        `,
+                                        `Worked with a team to develop a software solution for monitoring factory processes in the agricultural sector
+                                        and to build a mobile app that aids in the classification of grain quality in the field.`,
+                                        `Created a blog and advertising page for a company specializing in providing advertising services to financial
+                                        sector clients. Coordinated the work of an intern during the development process.
+                                        `,
                                     ]}
                                     stackList={[
                                         'HTML',
@@ -104,7 +103,8 @@ function ExperiencePage() {
                                     tasks={[
                                         'Analyzed business metrics to support marketing strategy decisions and helped create metrics and KPIs.',
                                         'Assisted in the construction and implementation of business processes, including the restructuring of chatbot flows on company website pages. This resulted in a 33% improvement in chatbot conversion rates.',
-                                        'Created reports and dashboards for data visualization to track results and developed playbooks to map and document various processes.',
+                                        'Created reports and dashboards for data visualization to track results.',
+                                        'Developed playbooks to map and document various processes.',
                                     ]}
                                     stackList={[
                                         'Python',
@@ -124,9 +124,10 @@ function ExperiencePage() {
                             href={CV}
                             download="Resume_Antonio_Moreno"
                             target="_blank"
+                            filename="Resume_Antonio_Moreno"
                         >
                             <StyledButton type="button">
-                                My Resume <DownloadSimple size={16} weight="bold" />
+                                Resume <DownloadSimple size={16} weight="bold" />
                             </StyledButton>
                         </a>
                     </section>
@@ -156,7 +157,7 @@ function TabContent(props) {
             </div>
             {props.tasks.map((task) => {
                 return (
-                    <div className="flex w-full items-start justify-start gap-2 mt-3 font-roboto text-sm">
+                    <div className="flex w-full items-start justify-start gap-2 mt-3 font-roboto text-sm" key={task}>
                         <div className="min-w-[12px]">
                             <CaretRight size={12} weight="fill" className="text-moon-purple" />
                         </div>
@@ -167,7 +168,10 @@ function TabContent(props) {
             <ul className="flex w-full items-start justify-start gap-2 mt-5 font-roboto text-sm flex-wrap">
                 {props.stackList.map((stack) => {
                     return (
-                        <li className="dark:bg-purple/20 bg-orange/20 px-2 py-0.5 rounded-md font-semibold dark:text-purple text-orange">
+                        <li
+                            className="dark:bg-purple/20 bg-orange/20 px-2 py-0.5 rounded-md font-semibold dark:text-purple text-orange"
+                            key={stack}
+                        >
                             {stack}
                         </li>
                     )

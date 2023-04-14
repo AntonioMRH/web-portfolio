@@ -21,6 +21,9 @@ module.exports = {
                 'moon-purple': '#805AD5',
                 'dark-moon': '#553c9a',
                 'body-text': '#1A202C',
+                'turquoise-100': '#03b5aa',
+                'turquoise-200': '#049a8f',
+                'turquoise-300': '#092327',
             },
             boxShadow: {
                 ext: 'inset 0 -1px 0 0 currentColor, 0 1px 0 0 currentColor',

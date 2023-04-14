@@ -5,6 +5,9 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Suspense, useRef } from 'react'
 import { PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
+import { useState } from 'react'
+import { useEffect } from 'react'
+import { MoonLoader } from 'react-spinners'
 
 function Model() {
     const gltf = useLoader(GLTFLoader, './me-voxel.gltf')
@@ -48,17 +51,29 @@ function Model() {
 }
 
 export default function VoxelMe() {
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        if (loading) {
+            setTimeout(() => setLoading(false), 1000)
+        }
+    }, [loading])
+
     return (
-        <Canvas>
-            <PerspectiveCamera makeDefault fov={75} position={[0, 8, 14]} />
-            <Suspense fallback={null}>
-                <Model />
-                <OrbitControls />
-            </Suspense>
-            <ambientLight intensity={0.5} />
-            {/* <pointLight /> */}
-            {/* <ambientLight intensity={0.1} /> */}
-            <spotLight position={[0, 8, 8]} />
-        </Canvas>
+        <>
+            {loading ? (
+                <MoonLoader size={40} color="#805AD5" />
+            ) : (
+                <Canvas>
+                    <PerspectiveCamera makeDefault fov={75} position={[0, 8, 14]} />
+                    <Suspense fallback={null}>
+                        <Model />
+                        <OrbitControls />
+                    </Suspense>
+                    <ambientLight intensity={0.5} />
+                    <spotLight position={[0, 8, 8]} />
+                </Canvas>
+            )}
+        </>
     )
 }

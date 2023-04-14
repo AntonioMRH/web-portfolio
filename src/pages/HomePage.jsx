@@ -1,9 +1,8 @@
-import { CaretRight, DownloadSimple } from '@phosphor-icons/react'
+import { CaretRight } from '@phosphor-icons/react'
 import { useNavigate } from 'react-router-dom'
 import AnimatedSection from '../components/AnimatedSection'
-import profile from '../assets/images/profile.png'
+import profile from '../assets/images/me.jpg'
 import StyledButton from '../components/Button'
-import CV from '../assets/docs/cv.pdf'
 
 const timeLine = [
     { event: 'Born in Tampa, US.', year: '1994' },
@@ -19,7 +18,7 @@ function HomePage() {
     const navigate = useNavigate()
     return (
         <article className="md:max-w-3xl w-full h-full">
-            <section className="sm:px-4 px-2 sm:mx-28 mx-4 dark:text-[rgba(255,255,255,0.9)] text-body-text">
+            <section className="sm:px-4 px-4 sm:mx-28 mx-4 dark:text-[rgba(255,255,255,0.9)] text-body-text">
                 <div
                     className="backdrop-blur-sm rounded-lg p-3 text-center 
 					dark:bg-white/[.08]  mb-6  font-roboto text-sm bg-[rgba(255,255,255,0.36)] mt-[-10px]"
@@ -63,8 +62,8 @@ function HomePage() {
                             to learn a bit about me and my work. Let's collaborate on your next project!
                         </p>
                         <div className="w-full flex items-center justify-center">
-                            <StyledButton type="button" onClick={() => navigate('/work')}>
-                                My portfolio <CaretRight size={15} weight="bold" />
+                            <StyledButton type="button" onClick={() => navigate('/projects')}>
+                                Projects <CaretRight size={15} weight="bold" />
                             </StyledButton>
                         </div>
                         <h3

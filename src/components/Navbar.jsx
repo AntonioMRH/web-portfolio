@@ -6,13 +6,13 @@ import SwitchThemeBtn from './SwitchThemeBtn'
 import { useNavigate } from 'react-router-dom'
 
 const navigation = [
-    { name: 'Work', href: '/work' },
+    { name: 'Portfolio', href: '/projects' },
     { name: 'Experience', href: '/experience' },
 ]
 
 const mobileNavigation = [
     { name: 'About', href: '/' },
-    { name: 'Work', href: '/work' },
+    { name: 'Portfolio', href: '/projects' },
     { name: 'Experience', href: '/experience' },
 ]
 

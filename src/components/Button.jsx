@@ -1,4 +1,4 @@
-function StyledButton({ children }) {
+function StyledButton(props) {
     return (
         <button
             type="button"
@@ -7,8 +7,9 @@ function StyledButton({ children }) {
             hover:dark:bg-moon-purple/[0.3] hover:bg-orange/[0.3] flex 
               items-center justify-center gap-1 outline-none dark:text-moon-purple 
               font-semibold text-orange"
+            {...props}
         >
-            {children}
+            {props.children}
         </button>
     )
 }
