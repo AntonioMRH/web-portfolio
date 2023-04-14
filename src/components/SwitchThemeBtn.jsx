@@ -5,7 +5,7 @@ import { Disclosure } from '@headlessui/react'
 
 function SwitchThemeBtn({ theme, handleChangeFunc }) {
     return (
-        <AnimatePresence exitBeforeEnter initial={false}>
+        <AnimatePresence mode="wait" initial={false}>
             <motion.div
                 key={theme}
                 className="inline-block"
@@ -14,7 +14,7 @@ function SwitchThemeBtn({ theme, handleChangeFunc }) {
                 exit={{ y: 20, opacity: 0 }}
                 transition={{ duration: 0.2 }}
             >
-                <Disclosure.Button
+                <button
                     className="transition duration-200 ease-out hover:ease-in w-10 h-10 flex items-center justify-center rounded-md p-1 dark:text-black-bg dark:hover:bg-dark-yellow dark:bg-yellow-sun text-light-bg hover:bg-dark-moon bg-moon-purple"
                     onClick={handleChangeFunc}
                 >
@@ -23,7 +23,7 @@ function SwitchThemeBtn({ theme, handleChangeFunc }) {
                     ) : (
                         <MoonIcon className="block h-4 w-4" aria-hidden="true" />
                     )}
-                </Disclosure.Button>
+                </button>
             </motion.div>
         </AnimatePresence>
     )
