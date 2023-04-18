@@ -75,7 +75,7 @@ function HomePage() {
                         <div className="flex flex-col items-start justify-start gap-1.5 pl-12 font-roboto">
                             {timeLine.map((item) => {
                                 return (
-                                    <div key={item.event}>
+                                    <div key={item.event} className="flex ">
                                         <span className="font-semibold mr-4 ml-[-3rem]">{item.year}</span>
                                         {item.event}
                                     </div>

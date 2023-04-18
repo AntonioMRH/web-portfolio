@@ -9,7 +9,7 @@ function Layout() {
         <>
             <Navbar />
             <main
-                className="max-w-full h-full min-h-screen pt-20 bg-light-bg dark:bg-black-bg flex
+                className="max-w-screen w-full h-full min-h-screen pt-20 bg-light-bg dark:bg-black-bg flex
 				flex-col items-center justify-start"
             >
                 <div className="h-[350px] w-full flex items-center justify-center">

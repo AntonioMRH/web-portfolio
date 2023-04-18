@@ -36,7 +36,7 @@ function Navbar() {
     }, [theme])
 
     return (
-        <header className="w-full z-10 fixed flex justify-center backdrop-blur-md h-16 dark:bg-[#20202380] dark:text-white bg-[#ffffff40]">
+        <header className="w-screen z-10 fixed flex justify-center backdrop-blur-md h-16 dark:bg-[#20202380] dark:text-white bg-[#ffffff40]">
             <Disclosure as="nav" className="w-full h-full flex  md:max-w-3xl p-3 sm:p-2">
                 {({ open }) => (
                     <>
