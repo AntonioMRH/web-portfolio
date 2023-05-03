@@ -1,5 +1,5 @@
 import AnimatedSection from '../../components/AnimatedSection'
-import screen1 from '../../assets/images/img3.png'
+import screen1 from '../../assets/images/img3.PNG'
 import { ArrowSquareOut, GithubLogo } from '@phosphor-icons/react'
 
 const projectStack = [
