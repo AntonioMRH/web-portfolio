@@ -13,9 +13,9 @@ function TodoAppPage() {
                         <h5 className="font-plus text-xl">Todo App</h5>
                         <div className="w-full flex-col items-start justify-center mb-2 font-roboto indent-8 text-regular">
                             <p>
-                                This project is a simple yet highly functional to-do list page, where users can add and
-                                select from various types of coffee products. The page is designed to help users keep
-                                track of their daily tasks and prioritize their activities accordingly.
+                                This project is a simple yet highly functional to-do list page. The application was
+                                designed to help users keep track of their daily tasks and prioritize their activities
+                                accordingly.
                             </p>
                             <p>
                                 Users can add new tasks by typing them into the input field and pressing the "Enter" key
