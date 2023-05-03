@@ -68,7 +68,7 @@ function ChirpPage() {
                                 <GithubLogo size={20} />
                             </a>
                         </div>
-                        <div className="w-full rounded-md overflow-hidden mb-10 sm:h-[290px] h-[185px]">
+                        <div className="w-full rounded-md overflow-hidden mb-10 sm:h-[290px]">
                             <img src={screen1} alt="screenshot of coffee delivery website" />
                         </div>
                     </div>
