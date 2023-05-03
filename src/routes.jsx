@@ -6,6 +6,7 @@ import Layout from './components/layouts/Layout'
 import ScrollToTop from './components/ScrollToTop'
 import TodoAppPage from './pages/projects/TodoApp'
 import DeliveryPage from './pages/projects/DeliveryApp'
+import ChirpPage from './pages/projects/ChirpApp'
 
 function RouteProvider() {
     return (
@@ -17,6 +18,7 @@ function RouteProvider() {
                     <Route path="/experience" element={<ExperiencePage />} />
                     <Route path="/projects" element={<ProjectsPage />} />
                     <Route path="/todo-app" element={<TodoAppPage />} />
+                    <Route path="/chirp" element={<ChirpPage />} />
                     <Route path="/coffee-delivery-app" element={<DeliveryPage />} />
                 </Route>
             </Routes>

@@ -2,6 +2,7 @@ import AnimatedSection from '../components/AnimatedSection'
 import ProjectBox from '../components/ProjectBox'
 import img1 from '../assets/images/img1.png'
 import img2 from '../assets/images/img2.png'
+import img3 from '../assets/images/img3.png'
 import { useNavigate } from 'react-router-dom'
 
 function ProjectsPage() {
@@ -15,7 +16,7 @@ function ProjectsPage() {
                         These are some of my projects. I will add more as soon as possible. Unfortunately, I can't share
                         my work-related projects due to NDAs and data privacy laws.
                     </p>
-                    <section className=" mt-6 flex items-start justify-center gap-8 flex-wrap">
+                    <section className=" mt-6 flex items-start justify-start px-2.5 gap-8 flex-wrap">
                         <ProjectBox
                             img={img1}
                             projectName="Coffee Delivery"
@@ -27,6 +28,12 @@ function ProjectsPage() {
                             projectName="Todo App"
                             projectDescription="A basic to do list."
                             onClick={() => navigate('/todo-app')}
+                        />
+                        <ProjectBox
+                            img={img3}
+                            projectName="Chirp"
+                            projectDescription="Chirp is a Twitter clone that only allows users to use emojis."
+                            onClick={() => navigate('/chirp')}
                         />
                     </section>
                 </div>
