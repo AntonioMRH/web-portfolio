@@ -68,8 +68,8 @@ function ChirpPage() {
                                 <GithubLogo size={20} />
                             </a>
                         </div>
-                        <div className="w-full rounded-md overflow-hidden mb-10 sm:h-[290px]">
-                            <img src={screen1} alt="screenshot of coffee delivery website" />
+                        <div className="w-full h-fit rounded-md overflow-hidden mb-10 sm:h-[290px]">
+                            <img src={screen1} alt="screenshot of chirp website" className="rounded-md" />
                         </div>
                     </div>
                 </AnimatedSection>
